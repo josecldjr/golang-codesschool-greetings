@@ -4,6 +4,7 @@ WORKDIR /go/src
 
 COPY . /go/src
 RUN apk add git
+RUN apk add gcc
 RUN apk add bash
 RUN go get github.com/gorilla/mux
 # RUN go get ./
