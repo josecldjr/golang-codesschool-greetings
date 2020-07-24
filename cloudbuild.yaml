@@ -26,5 +26,5 @@ steps:
       - go
       - build
       - "*.go"
-      - &&
+      - "&&"
       - ./hello
