@@ -30,5 +30,5 @@ func Hello(w http.ResponseWriter, r *http.Request) {
 }
 
 func greeting(message string) string {
-	return "<b>" + message + "</b>"
+	return "<b>" + message + "</ba>"
 }
