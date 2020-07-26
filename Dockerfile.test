@@ -15,11 +15,7 @@ RUN apk add bash
 
 COPY . /go/src
 
-# RUN go install
-RUN go get github.com/gorilla/mux
-
-RUN go test
-RUN go build -o hello *.go
+ENTRYPOINT [ "./entrypoint.sh" ]
 
 
 
