@@ -4,8 +4,6 @@ WORKDIR /go/src
 
 COPY . /go/src
 
-RUN export GOPATH=/go/src
-RUN export GOROOT=/go/src
 RUN apk add git
 RUN apk add gcc
 RUN apk add bash
