@@ -15,7 +15,7 @@ RUN apk add bash
 
 COPY . /go/src
 
-RUN chmod 755 .
+RUN chmod +xr docker-entrypoint.sh
 RUN ./entrypoint.sh
 
 
