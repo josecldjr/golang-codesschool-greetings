@@ -12,10 +12,11 @@ steps:
   - id: "Executando testes unitários"
     name: "gcr.io/cloud-builders/docker"
     args: 
+      - docker
       - run
       - golang_image
       - go
-      - test .
+      - test 
 
   # - id: "Testanto a build da aplicação"
   #   name: "gcr.io/cloud-builders/docker"
