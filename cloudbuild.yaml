@@ -15,7 +15,7 @@ steps:
       - run
       - golang_image
       - go
-      - test 
+      - test *.go 
 
   - id: "Testanto a build da aplicação"
     name: "gcr.io/cloud-builders/docker"
