@@ -3,6 +3,9 @@ FROM golang:1.13.12-alpine3.12
 WORKDIR /go/src
 
 COPY . /go/src
+
+RUN export GOPATH=/go/src
+RUN export GOROOT=/go/src
 RUN apk add git
 RUN apk add gcc
 RUN apk add bash
