@@ -1,0 +1,23 @@
+
+# BUILDER IMAGE
+FROM golang:1.13.12-alpine3.12 as builder
+
+WORKDIR /go/src
+
+# compile go scripts
+COPY . /go/src
+
+RUN export GOPATH=/go/src
+RUN export GOROOT=/go/src
+RUN apk add git
+RUN apk add gcc
+RUN apk add bash
+
+COPY . /go/src
+
+RUN chmod +x entrypoint.sh
+
+ENTRYPOINT [ "./entrypoint.sh" ]
+
+
+

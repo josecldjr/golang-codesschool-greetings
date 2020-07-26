@@ -1,0 +1,25 @@
+steps:
+  - id: "Fazendo build da imagem"
+    name: "gcr.io/cloud-builders/docker"
+    args: 
+      - build
+      - -t
+      - golang_image
+      - -f 
+      - Dockerfile.test
+      - .
+
+  - id: "Executando testes unitários"
+    name: "gcr.io/cloud-builders/docker"
+    args: 
+      - run
+      - golang_image
+      - "cd /go/src && go test"
+
+  # - id: "Testanto a build da aplicação"
+  #   name: "gcr.io/cloud-builders/docker"
+  #   args: 
+  #     - run
+  #     - golang_image
+  #     - go
+  #     - build
