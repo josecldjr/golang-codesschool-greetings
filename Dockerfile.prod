@@ -10,6 +10,7 @@ COPY . /go/src
 RUN export GOPATH=/go/src
 RUN export GOROOT=/go/src
 RUN apk add git
+RUN apk add gcc
 RUN go get github.com/gorilla/mux
 # RUN go install
 RUN go build -o hello *.go
