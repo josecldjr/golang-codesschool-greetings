@@ -15,7 +15,7 @@ RUN apk add bash
 
 COPY . /go/src
 
-ENTRYPOINT [ "./entrypoint.sh" ]
+CMD [ "./entrypoint.sh" ]
 
 
 
