@@ -1,12 +1,8 @@
 steps:
-  - id: "Executando testes unitários"
-    name: "gcr.io/cloud-builders/go"
-    args: [ "PROJECT_ROOT=/go/src", "GOPATH=/go/src", "go", "run", "golang_image", "go", "test"]
-
-  - id: "Testanto a build da aplicação"
-    name: "gcr.io/cloud-builders/go"
+  - id: "Executanto imagem de test"
+    name: "gcr.io/cloud-builders/docker"
     args: 
-      - PROJECT_ROOT=/go/src
-      - GOPATH=/go/src
-      - go
       - build
+      - -f 
+      - Dockerfile.test
+      - .
